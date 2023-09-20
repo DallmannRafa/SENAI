@@ -45,9 +45,16 @@ public class ListaComEncadeament {
         NoLista tmp = this.first;
         int index = -1;
 
-        while (info != tmp.getInfo()) {
-
+        while (info != tmp.getInfo() && tmp.getNext() != null) {
+            tmp = tmp.getNext();
+            index++;
         }
+
+        if (info == tmp.getInfo()) {
+            return index;
+        }
+
+        return index;
     }
 
     public boolean isEmpty() {
