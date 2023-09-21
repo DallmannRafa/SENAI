@@ -17,6 +17,10 @@ public class NoLista {
         this.next = no;
     }
 
+    public void setInfo(Integer info) {
+        this.info = info;
+    }
+
     public NoLista getNext() {
         return next;
     }
